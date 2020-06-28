@@ -51,7 +51,7 @@ def statusplot(num):
     y2 = drawDF['CPU']
     y3 = drawDF['Mem']
     y1_min = int(y1.min()- 1)
-    y1_max = int(y1.max() + 1)
+    y1_max = int(y1.max() + 10)
 
     fig,ax1 = plt.subplots()
     ax2=ax1.twinx()
