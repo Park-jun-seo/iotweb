@@ -43,7 +43,8 @@ def statusplot(num):
     num = int(num)
     #print ("<num={}>".format(num))
             
-    drawDF = DB.buildStatusDFFromDB(num)
+    #drawDF = DB.buildStatusDFFromDB(num)
+    drawDF = DB.buildStatusDFFromDB(10)
     #print(drawDF)
     
     y1 = drawDF['Temp']
@@ -54,7 +55,7 @@ def statusplot(num):
 
     fig,ax1 = plt.subplots()
     ax2=ax1.twinx()
-    ax1.set_ylim([0, 100])
+    ax1.set_ylim([0, 20])
     ax2.set_ylim([y1_min, y1_max])
 
     y1.plot(ax=ax2,style='g')

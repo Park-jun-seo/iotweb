@@ -12,7 +12,7 @@ def floatInf0(fstr):
     return fres
 
 class DBHelper:
-    def __init__(self, host='127.0.0.1'):
+    def __init__(self, host='127.0.0.1'):#'127.0.0.1'
         dbconfig.setHost(host)
 
     def connect(self):
@@ -62,7 +62,7 @@ class DBHelper:
 
     def buildStatusDFFromDB(self, num=None):
         conn = self.connect()
-        cursor = conn.cursor()
+        cursor = conn.cursor(buffered=True)
         
         try:
             #query = "select temp_time, temp_data from cputemp_table "
